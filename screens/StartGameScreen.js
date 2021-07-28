@@ -12,6 +12,7 @@ import {
   ScrollView,
   KeyboardAvoidingView,
 } from 'react-native';
+import { ScreenOrientation } from 'expo';
 import Card from '../components/Card';
 import colors from '../constants/colors';
 import Input from '../components/Input';
@@ -19,7 +20,6 @@ import NumberContainer from '../components/NumberContainer';
 import BodyText from '../components/BodyText';
 import TitleText from '../components/TitleText';
 import MainButton from '../components/MainButton';
-import { DebugInstructions } from 'react-native/Libraries/NewAppScreen';
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState('');
