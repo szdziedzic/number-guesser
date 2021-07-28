@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   Alert,
+  Dimensions,
 } from 'react-native';
 import Card from '../components/Card';
 import colors from '../constants/colors';
@@ -16,6 +17,7 @@ import NumberContainer from '../components/NumberContainer';
 import BodyText from '../components/BodyText';
 import TitleText from '../components/TitleText';
 import MainButton from '../components/MainButton';
+import { DebugInstructions } from 'react-native/Libraries/NewAppScreen';
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -109,8 +111,10 @@ const styles = StyleSheet.create({
     fontFamily: 'open-sans-bold',
   },
   inputContainer: {
-    width: 300,
-    maxWidth: '80%',
+    width: '80%',
+    //maxWidth: '80%',
+    minWidth: 300,
+    maxWidth: '95%',
     alignItems: 'center',
   },
   buttonContainer: {
@@ -120,7 +124,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   button: {
-    width: 100,
+    //width: 100,
+    width: Dimensions.get('window').width / 4,
   },
   input: {
     width: 50,
